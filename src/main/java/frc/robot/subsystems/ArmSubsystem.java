@@ -11,8 +11,8 @@ import static frc.robot.Constants.*;
 
 public class ArmSubsystem extends SubsystemBase {
     //defining the spark max arm motor
-    private CANSparkMax m_armLeader;
-    private CANSparkMax m_armFollower;
+    //private CANSparkMax m_armLeader;
+    //private CANSparkMax m_armFollower;
     
     private MotorControllerGroup m_MotorControllerGroup;
     //arm speed scale factor
@@ -21,22 +21,19 @@ public class ArmSubsystem extends SubsystemBase {
     //Defineing the arm encoder
     public RelativeEncoder m_lArmEncoder;
     public RelativeEncoder m_fArmEncoder;
-    public double m_groupArmEncoder;
-    public double one = m_lArmEncoder.getPosition() + 2;
-    //m_fArmEncoder.getPosition();
     
    
     public ArmSubsystem() {
-        m_armLeader = new CANSparkMax(ArmConstants.kArmLeader, MotorType.kBrushless);
-        m_armFollower = new CANSparkMax(ArmConstants.kArmFollower, MotorType.kBrushless);
-        m_armFollower.setInverted(true);
-        m_MotorControllerGroup = new MotorControllerGroup(m_armLeader, m_armFollower);
+        //m_armLeader = new CANSparkMax(ArmConstants.kArmLeader, MotorType.kBrushless);
+        //m_armFollower = new CANSparkMax(ArmConstants.kArmFollower, MotorType.kBrushless);
+        //m_armFollower.setInverted(true);
+        //m_MotorControllerGroup = new MotorControllerGroup(m_armLeader, m_armFollower);
 
         // Need  value for Arm Encoder in Constents
-        m_lArmEncoder = m_armLeader.getEncoder();
-        m_fArmEncoder = m_armFollower.getEncoder();
-        m_lArmEncoder.setPosition(0);
-        m_fArmEncoder.setPosition(0);
+        // m_lArmEncoder = m_armLeader.getEncoder();
+        // m_fArmEncoder = m_armFollower.getEncoder();
+        // m_lArmEncoder.setPosition(0);
+        // m_fArmEncoder.setPosition(0);
         
         //m_armMotor.setSmartCurrentLimit(30, 90, 10);
     }
@@ -115,7 +112,7 @@ public class ArmSubsystem extends SubsystemBase {
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
-    SmartDashboard.putNumber("Arm Motor Speed", m_armLeader.get());
+    // SmartDashboard.putNumber("Arm Motor Speed", m_armLeader.get());
     
   }
 
