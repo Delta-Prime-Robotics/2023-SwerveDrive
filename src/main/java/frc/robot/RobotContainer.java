@@ -36,7 +36,7 @@ public class RobotContainer {
   private final DriveSubsystem m_robotDrive = new DriveSubsystem();
 
   // The driver's controller
-  XboxController m_driverController = new XboxController(OIConstants.kDriverControllerPort);
+  //XboxController m_driverController = new XboxController(OIConstants.kDriverControllerPort);
   Joystick m_driverGamepad = new Joystick(Constants.UsbPort.kGamePadDr);
   /**
    * The container for the robot. Contains subsystems, OI devices, and commands.
